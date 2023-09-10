@@ -44,18 +44,5 @@ public class PlayerControl : MonoBehaviour
         GameObject newbullet = Instantiate(bullet,startPos,transform.rotation);
         BulletScript bulletScript = newbullet.GetComponent<BulletScript>();
         bulletScript.GetVelocity(vec);
-
-
-
-    }
-
-    public float Angle(Vector3 pos1,Vector3 pos2)
-    {
-        Vector2 dt = pos2 - pos1;
-        float r = Mathf.Atan2(dt.y, dt.x);
-        float ans = r * Mathf.Rad2Deg;
-        Debug.Log(ans);
-        return ans;
-
     }
 }
